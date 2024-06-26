@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(375deg, #f19475, #ff4500);
+}
+.wrpper{
+    width: 320px;
+    height: 400px;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+.wrpper .card{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #fff;
+    padding: 5px;
+    transform-style: preserve-3d;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transition: 0.7s cubic-bezier(0.4,0.2,0.2,1);
+    -webkit-transition: 0.7s cubic-bezier(0.4,0.2,0.2,1);
+    -moz-transition: 0.7s cubic-bezier(0.4,0.2,0.2,1);
+    -ms-transition: 0.7s cubic-bezier(0.4,0.2,0.2,1);
+    -o-transition: 0.7s cubic-bezier(0.4,0.2,0.2,1);
+}
+.wrpper:hover > .front-face{
+    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+}
+.wrpper .card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.wrpper .back-face{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+}
+.wrpper:hover > .back-face{
+    transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+}
+.wrpper .back-face img{
+    width: 150px;
+    height: 150px;
+    padding: 5px;
+    background: linear-gradient(375deg, #f19475, #ff4500);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.wrpper .back-face .info{
+    text-align: center;
+}
+.back-face .info .title{
+    font-size: 28px;
+    font-weight: 700;
+}
+.back-face ul{
+    display: flex;
+}
+.back-face ul a{
+    display: block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(375deg, #f19475, #ff4500);
+    border: 2px solid transparent;
+    line-height: 38px;
+    margin: 0 6px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+}
+.back-face ul a:hover{
+    background: none;
+    color: #ff4500;
+    border-color: #ff4500;
+}
